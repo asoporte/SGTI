@@ -17,7 +17,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/dashboard';
+    //SE CONFIFURO LA URL PARA ENTAR DE RAIZ
+    public const HOME = '/';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -37,6 +38,10 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
+            //SE CREA UN MIDDLEWATE PARA ENTRAR AL ARCHIVO RUTA ADMIN, SE AGRAGA AUTH PARA LA AUTENTIFICACION(LOGUEO) PARA INGRESAR AL ADMINISTRADOR
+            Route::middleware('web', 'auth')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/admin.php'));
         });
     }
 
