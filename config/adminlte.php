@@ -45,8 +45,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>SGTI</b>',
+    'logo_img' => 'vendor/adminlte/dist/img/Unico.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -188,7 +188,8 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    //SE CONFIGURA LA URL DEL LOGO
+    'dashboard_url' => '/admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -239,31 +240,53 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Buscar',
         ],
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+        //INICIO
         [
-            'text'        => 'pages',
+            'text'        => 'Dasboard',
             'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'icon'        => 'far fa-fw fas fa-tachometer-alt',
         ],
-        ['header' => 'account_settings'],
+
+        //['header' => 'account_settings'],
+        //SERVIDORES
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Servidores',
+            'url'  => '/',
+            'icon' => 'fas fa-fw fa-regular fa-server',
         ],
+        //INVENTARIO EQUIPO
         [
-            'text' => 'change_password',
+            'text' => 'Inventario',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-regular fa-warehouse',
         ],
+        
+        //INVENTARIO LICENCIAS
+        [
+            'text' => 'Licencias',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-light fa-id-card',
+        ],
+        //ACTAS
+        [
+            'text' => 'Actas',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-regular fa-file-signature',
+        ],
+        //TAREAS Y ACTIVIDADES
+        [
+            'text' => 'Tareas y Actividades',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-light fa-calendar-check',
+        ],
+/*         
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
@@ -302,6 +325,8 @@ return [
                 ],
             ],
         ],
+         */
+        
         ['header' => 'labels'],
         [
             'text'       => 'important',
