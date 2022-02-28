@@ -1,0 +1,58 @@
+D:/laragon/www/Tienda_virtual
+D:/laragon/www/RedSocial
+D:/laragon/www/sisVentas 
+D:/laragon/www/cms
+D:/laragon/www/ControlActas
+D:/laragon/www/SGTI
+
+
+git init //Para inicializar proyecto (Solo se utiliza una vez)
+git status //Para ver el estado del proyecto
+git add NOMBREDELARCIVO // Para agrega los archivos
+git add -A //Agrega todos los archivos
+git commit -m "MENSAJE" //Guardar los cambios con un mensaje 
+git log //Para ver los commits
+git checkout //Para movernos entre ramas o commits
+git log >commits.txt //Generar un archivo texto con todos los commits
+-------------------------------------------------------------------
+RESET
+-------------------------------------------------------------------
+git reset --soft CODIGODELCOMMIT//Elimina el commit pero no toca el codigo
+git reset --hard CODIGODELCOMMIT//Elimina todo
+git reset --hard HEAD~1 //Elimina el ultimo commit
+--------------------------------------------------------------------
+RAMAS
+--------------------------------------------------------------------
+git branch //Muestra las ramas
+git branch NOMBREDELARAMA //Para crear una rama de local
+git checkout -b NOMBREDELARAMA //Crear rama y entrar en ella
+git branch -d NOMBEDELARAMA //Para eliminar la rama
+git push origin --delete NOMBREDELARAMA //Eliminar rama del repositorio
+-------------------------------------------------------------------
+FUSIONES
+-------------------------------------------------------------------
+git merge NOMBREDELARAMAQUEVAABSORVER // Fusionar las ramas
+--------------------------------------------------------------------
+SUBIR A GIT HUB
+-------------------------------------------------------------------
+git remote add origin URL-HTTPS // Conecta el proyecto al respositorio
+git remote -v //Para comprobar que esta conectados muestra (fetch y push) 
+git remote remove origin // Para remover o quitar del repositorio
+git push origin NOMBREDELARAMA //Para subir el proyecto al respositorio
+-------------------------------------------------------------------
+BAJAR DE GIT
+-----------------------------------------------------------------------
+git pull origin NOMBREDELARAMA //Para bajar cambios del repositorio
+-------------------------------------------------------------------------------
+DESCARGAR O CLONAR 
+---------------------------------------------------------------------------------
+git clone URL-HTTPS // Sirve para clonar o descargar proyecto del respositorio(GITHUB o GITLAB)
+
+
+*Si son proyectos de Laravel
+composer install o composer update // Instalar dependencias de composer
+npm install // Instalar dependencias de npm
+cp .env.example .env // Copiar archivo .env
+php artisan key:generate // Crea clave automatica
+
+

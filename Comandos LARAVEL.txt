@@ -1,0 +1,50 @@
+//CREAR PROYECTO
+
+composer create-project laravel/laravel NOMBREDELPROYECTO
+
+//INICIAR MIGRACION
+
+php artisan migrate
+
+//INICIAR PROYECTO
+
+php artisan serve
+
+//CREAR UN CONTROLADOR
+
+php artisan make:controller NOMBREDELCONTROLADOR
+
+//CREAR UN MODELO
+
+php artisan make:model NOMBREDELMODELO
+
+//CREAR ARCHIVO DE MIGRACIONES
+
+php artisan make:migration NOMBREDELARCIVO
+
+//ELIMINAR ARCHIVO DE MIGRACIONES
+
+php artisan migrate:rollback
+
+//AGREGAR O REFRESCAR UN CAMPO A LA TABLA
+
+php artisan migrate:refresh 
+
+//genera inicio basico
+
+composer require laravel/ui
+
+//Genera login y registro 
+
+php artisan ui bootstrap
+
+
+-------------------------------------------------------------------------------------------
+
+//INSTALAR VUE
+
+npm install vue
+
+//INSTALAR RUTAS DE VUE
+
+npm install vue-router
