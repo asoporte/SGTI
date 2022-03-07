@@ -39,9 +39,9 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
             //SE CREA UN MIDDLEWARE PARA ENTRAR AL ARCHIVO RUTA ADMIN, SE AGRAGA AUTH PARA LA AUTENTIFICACION(LOGUEO) PARA INGRESAR AL ADMINISTRADOR
-            Route::middleware('web', 'auth')
+            Route::middleware('web')
                 ->namespace($this->namespace)
-                ->group(base_path('routes/Admin/admin.php'));
+                ->group(base_path('routes/admin.php'));
         });
     }
 

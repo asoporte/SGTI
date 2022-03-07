@@ -127,7 +127,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-ligth-danger elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -250,11 +250,11 @@ return [
         //INICIO
         [
             'text'        => 'Dasboard',
-            'url'         => 'admin/pages',
+            'route'       => 'index',
             'icon'        => 'far fa-fw fas fa-tachometer-alt',
         ],
 
-        //['header' => 'account_settings'],
+        ['header' => 'ADMINISTRADOR'],
         //SERVIDORES
         [
             'text' => 'Servidores',
@@ -277,7 +277,7 @@ return [
         //ACTAS
         [
             'text' => 'Actas',
-            'url'  => 'admin/settings',
+            'route'  => 'actas.index',
             'icon' => 'fas fa-fw fa-regular fa-file-signature',
         ],
         //TAREAS Y ACTIVIDADES
