@@ -36,7 +36,8 @@ class ActaController extends Controller
      */
     public function store(Request $request)//GUARDAR EN LA BD EL NUEVO REGISTRO
     {
-        //
+        $acta = Acta::create($request->all());
+        return redirect()->route('actas.index', $acta);
     }
 
     /**

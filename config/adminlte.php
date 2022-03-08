@@ -326,7 +326,7 @@ return [
             ],
         ],
          */
-        
+ /*        
         ['header' => 'labels'],
         [
             'text'       => 'important',
@@ -343,6 +343,7 @@ return [
             'icon_color' => 'cyan',
             'url'        => '#',
         ],
+         */
     ],
 
     /*
