@@ -29,6 +29,7 @@
                 </thead>
                 <tbody>
                     @foreach ($actas as $acta)
+                    <tr>
                         <td>{{$acta->Usuario}}</td>
                         <td>{{$acta->Ubicacion}}</td>
                         <td>{{$acta->Tipo_Solicitud}}</td>
@@ -38,15 +39,16 @@
                         <td>{{$acta->Responsable}}</td>
                         <td>{{$acta->Documento}}</td>
                         <td width="15px">
-                            <a href="{{route('actas.edit',$acta)}}" >Editar</a>
+                            <a href="{{route('actas.edit',$acta)}}" class="btn btn-warning">Editar</a>
                         </td>
                         <td width="15px">
-                            <form action="{{route('actas.destroy',$acta)}}" method="POST">
+                            <form action="{{route('actas.destroy',$acta)}}"  method="POST">
                                 @method('delete')
                                 @csrf
-                                <input type="submit" value="Eliminar">
+                                <input type="submit" value="Eliminar" class="btn btn-danger">
                             </form>
                         </td>
+                    </tr>
                     @endforeach
                 </tbody>
             </table>

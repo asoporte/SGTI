@@ -3,7 +3,7 @@
 @section('title', 'Nueva acta')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Nueva Acta</h1>
 @stop
 
 @section('content')
@@ -12,7 +12,7 @@
             {!! Form::open(['route'=>'actas.store']) !!}
                 <div class="form-group">
                     {!! Form::label('usuario', 'Usuario') !!}
-                    {!! Form::text('Usuario', null, ['class'=>'form-control']) !!}
+                    {!! Form::text('Usuario', null, ['class' => 'form-control form-control-lg']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('ubicacion', 'Ubicacion') !!}
