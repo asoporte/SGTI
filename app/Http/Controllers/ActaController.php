@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Acta;
+use Illuminate\Auth\Events\Validated;
 
 class ActaController extends Controller
 {
@@ -36,6 +37,19 @@ class ActaController extends Controller
      */
     public function store(Request $request)//GUARDAR EN LA BD EL NUEVO REGISTRO
     {
+        //SE REALIZA VALIDACION A LOS CAMPOS DEL CREATE, PARA SABER QQUE CAMPOS SON REQUERIDOS
+        $request->validate([
+            'usuario' => 'required',
+            'ubicacion' => 'required',
+            'tipo_Solicitud' => 'required',
+            'fecha' => 'required',
+            'serial' => 'required',
+            'equipo' => 'required',
+            'responsable' => 'required',
+            'version' => 'required',
+            'documento'=> 'required'
+        ]);
+        
         $acta = Acta::create($request->all());
         return redirect()->route('actas.index', $acta);
     }
