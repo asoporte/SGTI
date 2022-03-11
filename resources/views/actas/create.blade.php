@@ -11,82 +11,82 @@
         <div class="card-group">
             {!! Form::open(['route'=>'actas.store']) !!}
                 <div class="form-group">
-                    {!! Form::label('usuario', 'Usuario') !!}
+                    {!! Form::label('usuario', 'usuario') !!}
                     {!! Form::text('Usuario', null, ['class' => 'form-control form-control-lg']) !!}
                     {{-- //EL MENSAJE DE ERROR QUE MOSTRARA SI NO INGRESAMOS EL ERROR, LA VARIABLE $message MUESTRA UN ERROR PREDETERMINADO --}}       
-                    @error('usuario')
+                    @error('Usuario')
                         <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>                
             
                 <div class="form-group">
-                    {!! Form::label('ubicacion', 'Ubicacion') !!}
+                    {!! Form::label('ubicacion', 'ubicacion') !!}
                     {!! Form::text('Ubicacion', null, ['class'=>'form-control']) !!}
-                    @error('ubicacion')
+                    @error('Ubicacion')
                         <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>
                 
                 <div class="form-group">
-                    {!! Form::label('tipo_solicitud', 'T.solicitud') !!}
-                    {!! Form::text('tipo_solicitud', null, ['class'=>'form-control']) !!}
-                    @error('tipo_solicitud')
+                    {!! Form::label('tipo_solicitud', 'tipo_solicitud') !!}
+                    {!! Form::text('Tipo_Solicitud', null, ['class'=>'form-control']) !!}
+                    @error('Tipo_solicitud')
                         <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>
                 
                 <div class="form-group">
-                    {!! Form::label('fecha', 'Fecha') !!}
+                    {!! Form::label('fecha', 'fecha') !!}
                     {!! Form::date('Fecha', null, ['class'=>'form-control']) !!}
-                    @error('fecha')
+                    @error('Fecha')
                         <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('descripcion', 'Descripcion') !!}
+                    {!! Form::label('descripcion', 'descripcion') !!}
                     {!! Form::text('Descripcion', null, ['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::label('serial', 'Serial') !!}
+                    {!! Form::label('serial', 'serial') !!}
                     {!! Form::text('Serial', null, ['class'=>'form-control']) !!}
-                    @error('serial')
+                    @error('Serial')
                         <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('equipo', 'Equipo') !!}
-                    {!! Form::text('equipo', null, ['class'=>'form-control']) !!}
-                    @error('equipo')
+                    {!! Form::label('equipo', 'equipo') !!}
+                    {!! Form::text('Equipo', null, ['class'=>'form-control']) !!}
+                    @error('Equipo')
                         <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('responsable', 'Responsable') !!}
-                    {!! Form::text('responsable', null, ['class'=>'form-control']) !!}
-                    @error('responsable')
+                    {!! Form::label('responsable', 'responsable') !!}
+                    {!! Form::text('Responsable', null, ['class'=>'form-control']) !!}
+                    @error('Responsable')
                         <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('version', 'Version') !!}
+                    {!! Form::label('version', 'version') !!}
                     {!! Form::text('Version', null, ['class'=>'form-control']) !!}
-                    @error('version')
+                    @error('Version')
                         <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('observacion', 'Observacion') !!}
+                    {!! Form::label('observacion', 'observacion') !!}
                     {!! Form::text('Observacion', null, ['class'=>'form-control']) !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::label('documento', 'Documento') !!}
-                    {!! Form::text('documento', null, ['class'=>'form-control']) !!}
-                    @error('documento')
+                    {!! Form::label('documento', 'documento') !!}
+                    {!! Form::text('Documento', null, ['class'=>'form-control']) !!}
+                    @error('Documento')
                         <span class="text-danger">{{$message}}</span>
                     @enderror
                 </div>

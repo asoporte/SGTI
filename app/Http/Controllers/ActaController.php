@@ -39,19 +39,20 @@ class ActaController extends Controller
     {
         //SE REALIZA VALIDACION A LOS CAMPOS DEL CREATE, PARA SABER QQUE CAMPOS SON REQUERIDOS
         $request->validate([
-            'usuario' => 'required',
-            'ubicacion' => 'required',
-            'tipo_Solicitud' => 'required',
-            'fecha' => 'required',
-            'serial' => 'required',
-            'equipo' => 'required',
-            'responsable' => 'required',
-            'version' => 'required',
-            'documento'=> 'required'
+            'Usuario' => 'required',
+            'Ubicacion' => 'required',
+            'Tipo_Solicitud' => 'required',
+            'Fecha' => 'required',
+            'Serial' => 'required',
+            'Equipo' => 'required',
+            'Responsable' => 'required',
+            'Version' => 'required',
+            'Documento'=> 'required'
         ]);
         
         $acta = Acta::create($request->all());
-        return redirect()->route('actas.index', $acta);
+         //EL MENSAJE LO MOSTRAREMOS EN LA VISTA DE INDEX CUANDO GUARDE
+        return redirect()->route('actas.index', $acta)->with('guardar','El acta ha sido guardada satisfactoriamente');;
     }
 
     /**
@@ -73,7 +74,8 @@ class ActaController extends Controller
      */
     public function edit(Acta $acta)//ABIR UN FORMULARIO PARA EDICION DE UN REGISTRO
     {
-        return view('actas.edit');
+
+        return view('actas.edit', compact('acta'));
     }
 
     /**
@@ -85,7 +87,21 @@ class ActaController extends Controller
      */
     public function update(Request $request, Acta $acta)//ACTUALIZAR LA INFORMACION D EUN REGISTRO
     {
-        //
+         //SE REALIZA VALIDACION A LOS CAMPOS DEL CREATE, PARA SABER QQUE CAMPOS SON REQUERIDOS
+         $request->validate([
+            'Usuario' => 'required',
+            'Ubicacion' => 'required',
+            'Tipo_Solicitud' => 'required',
+            'Fecha' => 'required',
+            'Serial' => 'required',
+            'Equipo' => 'required',
+            'Responsable' => 'required',
+            'Version' => 'required',
+            'Documento'=> 'required'
+        ]);      
+        $acta->update($request->all());
+        //EL MENSAJE LO MOSTRAREMOS EN LA VISTA DE INDEX CUANDO ACTULICE
+        return redirect()->route('actas.index')->with('actualizar','El acta ha sido actualiza exitosamente');
     }
 
     /**

@@ -8,6 +8,18 @@
 
 @section('content')
 
+@if (session('guardar'))
+    <div class="aler alert-success">
+        <strong>{{session('guardar')}}</strong>
+    </div>    
+@endif
+
+@if (session('actualizar'))
+    <div class="aler alert-success">
+        <strong>{{session('actualizar')}}</strong>
+    </div>    
+@endif
+
     <div class="card-header">
         <a href="{{route('actas.create')}}" class="btn btn-primary">Crear Acta</a>
     </div>
