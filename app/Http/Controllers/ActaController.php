@@ -112,6 +112,7 @@ class ActaController extends Controller
      */
     public function destroy(Acta $acta)//ELIMINAR UN REGISTRO DE LA BD
     {
-        //
+        $acta->delete();
+        return redirect()->route('actas.index')->with('eliminar','El acta fue eliminada satisfactoriamente');
     }
 }

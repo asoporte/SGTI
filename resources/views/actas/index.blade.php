@@ -20,6 +20,12 @@
     </div>    
 @endif
 
+@if (session('eliminar'))
+    <div class="aler alert-success">
+        <strong>{{session('eliminar')}}</strong>
+    </div>    
+@endif
+
     <div class="card-header">
         <a href="{{route('actas.create')}}" class="btn btn-primary">Crear Acta</a>
     </div>
