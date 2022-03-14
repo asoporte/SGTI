@@ -31,7 +31,7 @@
     </div>
     <div class="card">
         <div class="card-body">
-            <table class="table table-striped">
+            <table id="actas" class="table table-striped shadow-lg mt-4">
                 <thead>
                     <tr>
                         <th>USUARIO</th>
@@ -42,7 +42,7 @@
                         <th>EQUIPO</th>
                         <th>RESPONSABLE</th>
                         <th>DOCUMENTO</th>
-                        <th colspan="2"></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,11 +56,9 @@
                         <td>{{$acta->Equipo}}</td>
                         <td>{{$acta->Responsable}}</td>
                         <td>{{$acta->Documento}}</td>
-                        <td width="15px">
-                            <a href="{{route('actas.edit',$acta)}}" class="btn btn-warning">Editar</a>
-                        </td>
-                        <td width="15px">
+                        <td width="150px">
                             <form action="{{route('actas.destroy',$acta)}}"  method="POST">
+                                <a href="{{route('actas.edit',$acta)}}" class="btn btn-warning">Editar</a>
                                 @method('delete')
                                 @csrf
                                 <input type="submit" value="Eliminar" class="btn btn-danger">
@@ -74,3 +72,30 @@
     </div>
 @stop
 
+@section('css')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+@endsection
+
+@section('js')
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+            $('#actas').DataTable({
+                "language":{
+                    "search":       "Buscar",
+                    "lengthMenu":    "Mostrar _MENU_ registros por pagina",
+                    "info":         "Mostrando pagina _PAGE_ de _PAGES_",
+                    "paginate":     {
+                                        "previous": "Anterior",
+                                        "next":     "Siguiente",
+                                        "first":    "Primero",
+                                        "last":     "Ultimo"
+                    }
+                }
+            });
+            } );
+        </script>
+@endsection
