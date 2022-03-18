@@ -18,7 +18,7 @@
                     {!! Form::text('Usuario', null, ['class' => 'form-control ']) !!}
                     {{-- //EL MENSAJE DE ERROR QUE MOSTRARA SI NO INGRESAMOS EL ERROR, LA VARIABLE $message MUESTRA UN ERROR PREDETERMINADO --}}       
                     @error('Usuario')
-                        <span class="text-danger">{{$message}}</span>
+                        {{$message}}
                     @enderror
                 </div>                
             

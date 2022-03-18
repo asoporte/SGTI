@@ -29,9 +29,9 @@
     <div class="card-header">
         <a href="{{route('actas.create')}}" class="btn btn-primary">Crear Acta</a>
     </div>
-    <div class="card">
+    <div class="card" >
         <div class="card-body">
-            <table id="actas" class="table table-striped shadow-lg mt-4">
+            <table id="actas" class="table table-striped shadow-lg mt-4 ">
                 <thead>
                     <tr>
                         <th>USUARIO</th>
@@ -42,6 +42,7 @@
                         <th>EQUIPO</th>
                         <th>RESPONSABLE</th>
                         <th>DOCUMENTO</th>
+                        <th></th>
                         <th></th>
                     </tr>
                 </thead>
@@ -56,13 +57,16 @@
                         <td>{{$acta->Equipo}}</td>
                         <td>{{$acta->Responsable}}</td>
                         <td>{{$acta->Documento}}</td>
-                        <td width="150px">
+                        <td >
                             <form action="{{route('actas.destroy',$acta)}}"  method="POST">
                                 <a href="{{route('actas.edit',$acta)}}" class="btn btn-warning">Editar</a>
-                                @method('delete')
-                                @csrf
-                                <input type="submit" value="Eliminar" class="btn btn-danger">
+                                
                             </form>
+                        </td>
+                        <td>
+                            <input type="submit" value="Eliminar" class="btn btn-danger">
+                            @method('delete')
+                            @csrf
                         </td>
                     </tr>
                     @endforeach
